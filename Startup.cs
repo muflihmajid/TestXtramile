@@ -49,9 +49,6 @@ namespace SceletonAPI
             // declare configurable data or 
             services.AddSingleton<Utils>();
             services.AddHttpContextAccessor();
-            // setting
-            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-
             services.AddHttpClient();
             // Add DbContext using SQL Server Provider
             services.AddDbContext<IDBContext, DBContext>(options =>
